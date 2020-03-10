@@ -32,6 +32,8 @@
                         <li><a href="exercicio.php?dir=tipos&file=int">Inteiro</a></li>
                         <li><a href="exercicio.php?dir=tipos&file=float">Float</a></li>
                         <li><a href="exercicio.php?dir=tipos&file=aritimeticas">Op. aritiméticas</a></li>
+                        <li><a href="exercicio.php?dir=tipos&file=desafio_precedencia">Desafio precedência</a></li>
+                        <li><a href="exercicio.php?dir=tipos&file=string">String</a></li>
                     </ul>
                 </div>
             </nav>
