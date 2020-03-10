@@ -34,6 +34,18 @@
                         <li><a href="exercicio.php?dir=tipos&file=aritimeticas">Op. aritiméticas</a></li>
                         <li><a href="exercicio.php?dir=tipos&file=desafio_precedencia">Desafio precedência</a></li>
                         <li><a href="exercicio.php?dir=tipos&file=string">String</a></li>
+                        <li><a href="exercicio.php?dir=tipos&file=desafio_string">Desafio String</a></li>
+                        <li><a href="exercicio.php?dir=tipos&file=booleano">Booleano</a></li>
+                        <li><a href="exercicio.php?dir=tipos&file=conversoes">Conversões</a></li>
+                    </ul>
+                </div>
+                <div class="modulo azul">
+                    <h3>Variáveis</h3>
+                    <ul>
+                        <li><a href="exercicio.php?dir=variaveis&file=basico">Básico</a></li>
+                        <li><a href="exercicio.php?dir=variaveis&file=desafio_equacao">Desafio equação</a></li>
+                        <li><a href="exercicio.php?dir=variaveis&file=atribuicoes">Atribuições</a></li>
+                        <li><a href="exercicio.php?dir=variaveis&file=interpolacao">Interpolação</a></li>
                     </ul>
                 </div>
             </nav>
