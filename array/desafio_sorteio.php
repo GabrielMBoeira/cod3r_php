@@ -1,7 +1,7 @@
 <div class="titulo">Desafio Sorteio</div>
 
 <?php
-$nomes = ["Elza", "Rapunzel", "Branca de neve", "Cinderela"];
+$nomes = ["Elza", "Rapunzel", "Branca de neve", "Cinderela", "Ana", "Gabriela"];
 $index = array_rand($nomes);
 echo "<div center><h1>{$nomes[$index]}</h1></div>"
 
