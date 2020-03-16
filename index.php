@@ -16,7 +16,17 @@
     <main class="principal">
         <div class="conteudo">
             <nav class="modulos">
-            <div class="modulo verde-escuro">
+                <div class="modulo vermelho-escuro">
+                    <h3>07-Funções</h3>
+                    <ul>
+                        <li><a href="exercicio.php?dir=funcoes&file=escopo">Função e Escopo</a></li>
+                        <li><a href="exercicio.php?dir=funcoes&file=args_retorno">Argumentos e retornos</a></li>
+                        <li><a href="exercicio.php?dir=funcoes&file=palindromo">Desafio Palindromo</a></li>
+                        <li><a href="exercicio.php?dir=funcoes&file=args_variaveis">Argumentos variaveis</a></li>
+                        <li><a href="exercicio.php?dir=funcoes&file=args_padrao">Argumentos padrão</a></li>
+                    </ul>
+                </div>
+                <div class="modulo verde-escuro">
                     <h3>06-Repeticões</h3>
                     <ul>
                         <li><a href="exercicio.php?dir=repeticoes&file=for">Laço For</a></li>
@@ -27,7 +37,7 @@
                         <li><a href="exercicio.php?dir=repeticoes&file=while">While/Do While</a></li>
                         <li><a href="exercicio.php?dir=repeticoes&file=desafio_tabela">Desafio Tabela #01</a></li>
                         <li><a href="exercicio.php?dir=repeticoes&file=desafio_tabela2">Desafio Tabela #02</a></li>
-                    </ul>   
+                    </ul>
                 </div>
                 <div class="modulo laranja">
                     <h3>05-Array</h3>
@@ -43,7 +53,7 @@
                         <li><a href="exercicio.php?dir=array&file=get">$_GET</a></li>
                         <li><a href="exercicio.php?dir=array&file=post">$_POST</a></li>
                         <li><a href="exercicio.php?dir=array&file=comparacao">Comparação arrays</a></li>
-                    </ul>   
+                    </ul>
                 </div>
                 <div class="modulo roxo">
                     <h3>04-Controle</h3>
