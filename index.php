@@ -25,7 +25,12 @@
                         <li><a href="exercicio.php?dir=array&file=desafio_meses">Desafio meses</a></li>
                         <li><a href="exercicio.php?dir=array&file=operacoes">Operações</a></li>
                         <li><a href="exercicio.php?dir=array&file=desafio_sorteio">Desafio sorteio</a></li>
-                    </ul>
+                        <li><a href="exercicio.php?dir=array&file=multi">Multidimensionais</a></li>
+                        <li><a href="exercicio.php?dir=array&file=constantes">Arrays constantes</a></li>
+                        <li><a href="exercicio.php?dir=array&file=get">$_GET</a></li>
+                        <li><a href="exercicio.php?dir=array&file=post">$_POST</a></li>
+                        <li><a href="exercicio.php?dir=array&file=comparacao">Comparação arrays</a></li>
+                    </ul>   
                 </div>
                 <div class="modulo roxo">
                     <h3>04-Controle</h3>
