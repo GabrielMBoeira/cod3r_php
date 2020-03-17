@@ -24,6 +24,10 @@
                         <li><a href="exercicio.php?dir=funcoes&file=palindromo">Desafio Palindromo</a></li>
                         <li><a href="exercicio.php?dir=funcoes&file=args_variaveis">Argumentos variaveis</a></li>
                         <li><a href="exercicio.php?dir=funcoes&file=args_padrao">Argumentos padrão</a></li>
+                        <li><a href="exercicio.php?dir=funcoes&file=usando_tipos">Usando tipos</a></li>
+                        <li><a href="exercicio.php?dir=funcoes&file=anonimas">Funções anonimas</a></li>
+                        <li><a href="exercicio.php?dir=funcoes&file=closure_callable">Clousure & Callable</a></li>
+                        <li><a href="exercicio.php?dir=funcoes&file=recursividade">Recursividade</a></li>
                     </ul>
                 </div>
                 <div class="modulo verde-escuro">
@@ -108,7 +112,8 @@
         </div>
     </main>
     <footer class="rodape">
-        COD3R & ALUNOS © <?= date('Y'); ?>
+        COD3R & ALUNOS © <?= date('Y');
+        ?>
     </footer>
 </body>
 
