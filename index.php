@@ -28,6 +28,7 @@
                         <li><a href="exercicio.php?dir=funcoes&file=anonimas">Funções anonimas</a></li>
                         <li><a href="exercicio.php?dir=funcoes&file=closure_callable">Clousure & Callable</a></li>
                         <li><a href="exercicio.php?dir=funcoes&file=recursividade">Recursividade</a></li>
+                        <li><a href="exercicio.php?dir=funcoes&file=desafio_recursao">Desafio recursao</a></li>
                     </ul>
                 </div>
                 <div class="modulo verde-escuro">
