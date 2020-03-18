@@ -16,6 +16,14 @@
     <main class="principal">
         <div class="conteudo">
             <nav class="modulos">
+                <div class="modulo azul-escuro">
+                    <h3>08-Classes / Objetos</h3>
+                    <ul>
+                        <li><a href="exercicio.php?dir=classes_objetos&file=classe">Classe</a></li>
+                        <li><a href="exercicio.php?dir=classes_objetos&file=desafio_data">Desafio Data</a></li>
+                        <li><a href="exercicio.php?dir=classes_objetos&file=construtor_destrutor">Construtor Destrutor</a></li>
+                    </ul>
+                </div>
                 <div class="modulo vermelho-escuro">
                     <h3>07-Funções</h3>
                     <ul>
