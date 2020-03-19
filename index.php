@@ -16,8 +16,14 @@
     <main class="principal">
         <div class="conteudo">
             <nav class="modulos">
+                <div class="modulo roxo-escuro">
+                    <h3>09-Includes</h3>
+                    <ul>
+                        <li><a href="exercicio.php?dir=includes&file=include">Include</a></li>
+                    </ul>
+                </div>
                 <div class="modulo azul-escuro">
-                    <h3>08-Classes / Objetos</h3>
+                    <h3>08-Paradigmas O.O</h3>
                     <ul>
                         <li><a href="exercicio.php?dir=classes_objetos&file=classe">Classe</a></li>
                         <li><a href="exercicio.php?dir=classes_objetos&file=desafio_data">Desafio Data</a></li>
@@ -26,6 +32,13 @@
                         <li><a href="exercicio.php?dir=classes_objetos&file=visibilidade">Visibilidade</a></li>
                         <li><a href="exercicio.php?dir=classes_objetos&file=static">Membros estáticos</a></li>
                         <li><a href="exercicio.php?dir=classes_objetos&file=interface">Interface</a></li>
+                        <li><a href="exercicio.php?dir=classes_objetos&file=abstract">Abstract</a></li>
+                        <li><a href="exercicio.php?dir=classes_objetos&file=desafio_erros">Desafio Erros</a></li>
+                        <li><a href="exercicio.php?dir=classes_objetos&file=final">Final</a></li>
+                        <li><a href="exercicio.php?dir=classes_objetos&file=traits_01">Traits #01</a></li>
+                        <li><a href="exercicio.php?dir=classes_objetos&file=traits_02">Traits #02</a></li>
+                        <li><a href="exercicio.php?dir=classes_objetos&file=metodos_magicos">Métodos Mágicos</a></li>
+                        <li><a href="exercicio.php?dir=classes_objetos&file=polimorfismo">Polimorfismo</a></li>
                     </ul>
                 </div>
                 <div class="modulo vermelho-escuro">
