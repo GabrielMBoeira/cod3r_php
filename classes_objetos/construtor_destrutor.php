@@ -1,25 +1,32 @@
-<div class="titulo">Classe Data</div>
+<div class="titulo">Construtor e Destrutor</div>
 
 <?php
-class Data {
-    public $dia = 1;
-    public $mes = 1;
-    public $ano = 1970;
+class Pessoa {
+    public $nome;
+    public $idade;
+
+    function __construct($novoNome, $idade = 18) {
+        echo 'Construtor invocado! <br>';
+        $this->nome = $novoNome;
+        $this->idade = $idade;
+    }
+
+    function __destruct() {
+        echo 'E morreu!<br>';
+    }
 
     public function apresentar() {
-        return "{$this->dia}/{$this->mes}/{$this->ano}";
+        echo "{$this->nome}, {$this->idade} anos<br>";
     }
 }
 
-$aniversario = new Data;
-$aniversario->dia = 15;
-$aniversario->mes = 8;
-$aniversario->ano = 2014;
+// $pessoa = new Pessoa(); // Problema
 
-$casamento = new Data();
-$casamento->dia = 1;
-$casamento->mes = 8;
-$casamento->ano = 2009;
+$pessoaA = new Pessoa('Rebeca Maria', 40);
+$pessoaB = new Pessoa('João Pedro');
 
-echo $aniversario->apresentar(), '<br>';
-echo $casamento->apresentar();
+$pessoaA->apresentar();
+unset($pessoaA);
+
+$pessoaB->apresentar();
+$pessoaB = null;
