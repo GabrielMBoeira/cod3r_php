@@ -1,4 +1,16 @@
 <nav class="modulos">
+                <div class="modulo laranja">
+                    <h3>15-Banco de dados</h3>
+                    <ul>
+                        <li><a href="exercicio.php?dir=db&file=criar_banco">Criar DB</a></li>
+                        <li><a href="exercicio.php?dir=db&file=criar_tabela">Criar Tabela</a></li>
+                        <li><a href="exercicio.php?dir=db&file=inserir_1">Inserir #01</a></li>
+                        <li><a href="exercicio.php?dir=db&file=inserir_2">Inserir #02</a></li>
+                        <li><a href="exercicio.php?dir=db&file=consultar">Consultar Registros</a></li>
+                        <li><a href="exercicio.php?dir=db&file=excluir_1">Excluir Registro #01</a></li>
+                        <li><a href="exercicio.php?dir=db&file=excluir_2">Excluir Registro #02</a></li>
+                    </ul>
+                </div>
                 <div class="modulo roxo">
                     <h3>14-Formulário</h3>
                     <ul>
