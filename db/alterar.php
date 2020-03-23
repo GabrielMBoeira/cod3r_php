@@ -1,9 +1,31 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<div class="titulo">Inserir Registro #02</div>
+<div class="titulo">Alterar Registro</div>
 
 <?php 
-if(count($_POST) > 0) {
+require_once "conexao.php";
+$conexao = novaConexao();
 
+if($_GET['codigo']) {
+    $sql = "SELECT * FROM cadastro WHERE id = ?";
+    $stmt = $conexao->prepare($sql);
+    $stmt->bind_param("i", $_GET['codigo']);
+    
+    if($stmt->execute()) {
+        $resultado = $stmt->get_result();
+        if($resultado->num_rows > 0) {
+            $dados = $resultado->fetch_assoc();
+            if($dados['nascimento']) {
+                $dt = new DateTime($dados['nascimento']);
+                $dados['nascimento'] = $dt->format('d/m/Y');
+            }
+            if($dados['salario']) {
+                $dados['salario'] = str_replace(".", ",", $dados['salario']);
+            }
+        }
+    }
+}
+
+if(count($_POST) > 0) {
     $dados = $_POST;
     $erros = [];
 
@@ -30,22 +52,23 @@ if(count($_POST) > 0) {
     $filhosConfig = [
         "options" => ["min_range" => 0, "max_range" => 20]
     ];
-
-    if (!filter_var($dados['filhos'], FILTER_VALIDATE_INT, $filhosConfig) && $dados['filhos'] != 0) {
+    if (!filter_var($dados['filhos'], FILTER_VALIDATE_INT,
+        $filhosConfig) && $dados['filhos'] != 0) {
         $erros['filhos'] = 'Quantidade de filhos inválida (0-20).';
     }
 
     $salarioConfig = ['options' => ['decimal' => ',']];
-    if (!filter_var($dados['salario'], FILTER_VALIDATE_FLOAT, $salarioConfig)) {
+    if (!filter_var($dados['salario'],
+        FILTER_VALIDATE_FLOAT, $salarioConfig)) {
         $erros['salario'] = 'Salário inválido';
     }
 
     if(!count($erros)) {
-        require_once "conexao.php";
+        $sql = "UPDATE cadastro 
+        SET nome = ?, nascimento = ?, email = ?,
+        site = ?, filhos = ?, salario = ?
+        WHERE id = ?";
 
-        $sql = "INSERT INTO cadastro (nome, nascimento, email, site, filhos, salario) VALUES (?, ?, ?, ?, ?, ?)";
-
-        $conexao = novaConexao();
         $stmt = $conexao->prepare($sql);
 
         $params = [
@@ -54,10 +77,11 @@ if(count($_POST) > 0) {
             $dados['email'],
             $dados['site'],
             $dados['filhos'],
-            $dados['salario'],
+            $dados['salario'] ? str_replace(",", ".", $dados['salario']) : null,
+            $dados['id'],
         ];
 
-        $stmt->bind_param("ssssid", ...$params);
+        $stmt->bind_param("ssssidi", ...$params);
 
         if($stmt->execute()) {
             unset($dados);
@@ -72,7 +96,24 @@ if(count($_POST) > 0) {
     <!-- </div> -->
 <?php endforeach ?>
 
+<form action="/exercicio.php" method="get">
+    <input type="hidden" name="dir" value="db">
+    <input type="hidden" name="file" value="alterar">
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <input type="number" name="codigo"
+                class="form-control"
+                value="<?= $_GET['codigo'] ?>"
+                placeholder="Informe o código para consulta">
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-success mb-4">Consultar</button>
+        </div>
+    </div>
+</form>
+
 <form action="#" method="post">
+    <input type="hidden" name="id" value="<?= $dados['id'] ?>">
     <div class="form-row">
         <div class="form-group col-md-8">
             <label for="nome">Nome</label>
