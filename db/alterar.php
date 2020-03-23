@@ -64,10 +64,7 @@ if(count($_POST) > 0) {
     }
 
     if(!count($erros)) {
-        $sql = "UPDATE cadastro 
-        SET nome = ?, nascimento = ?, email = ?,
-        site = ?, filhos = ?, salario = ?
-        WHERE id = ?";
+        $sql = "UPDATE cadastro SET nome = ?, nascimento = ?, email = ?, site = ?, filhos = ?, salario = ? WHERE id = ?";
 
         $stmt = $conexao->prepare($sql);
 
